@@ -8,7 +8,7 @@ const db = require('./config/mongoose');
 
 app.use(expressLayouts);
 
-// extract sttyles and scripts
+// extract styles and scripts
 
 app.set('layout extractStyles', true);
 app.set('layout extractScripts', true);

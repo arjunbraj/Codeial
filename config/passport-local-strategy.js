@@ -9,10 +9,16 @@ passport.use(new LocalStrategy({
     function(email, password, done){
         // find the user
         User.findOne({email: email}, function(err, user){
-            if(err){console.log('Error in finding user --> Passport'); return done(err);}
-            if(!user || user.password != password){console.log('Invalid Usernam or Password'); return done(null, false);}
+            if(err){
+                console.log('Error in finding user --> Passport'); 
+                return done(err);
+            }
+            if(!user || user.password != password){
+                console.log('Invalid Usernam or Password'); 
+                return done(null, false);
+            }
             return done(null, user);
-        })
+        });
     }
 ));
 
@@ -24,7 +30,10 @@ passport.serializeUser(function(user, done){
 // deserialize the user
 passport.deserializeUser(function(id, done){
     User.findById(id, function(err, user){
-        if(err){console.log('Error in finding user --> Passport'); return done(err);}
+        if(err){
+            console.log('Error in finding user --> Passport'); 
+            return done(err);
+        }
         return done(null, user);
     });
 });

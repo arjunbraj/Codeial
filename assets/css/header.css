@@ -1,0 +1,31 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;background-color: #1e86ee;
+    color: white;
+    /* margin: 0; */
+    height: 2.5rem;
+    font-weight: bold;
+}
+
+header div{
+    padding: 5px;
+}
+
+#signing-options{
+    display: flex;
+
+}
+
+.inline-div{
+    width: 6rem;
+}
+
+.inline-div a{
+    /* display: inline-block; */
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: normal;
+}

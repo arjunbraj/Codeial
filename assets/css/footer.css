@@ -1,0 +1,25 @@
+footer{
+    display: flex;
+    color: white;
+    background-color: gray;
+    margin-top: 100vh;
+    height: 4rem;
+}
+
+footer > div{
+    padding-left: 10px;
+    padding-top: 15px;
+}
+
+#pages{
+    display: flex;
+}
+
+#pages a{
+    color: white;
+    text-decoration: none;
+}
+
+#pages div{
+    width: 5rem;
+}

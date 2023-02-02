@@ -3,7 +3,7 @@
     <div id="signing-options">
         <% if(locals.user){ %>
             <div class="inline-div">
-                <a href="/users/profile"><%= user.name %></a>
+                <a href="/users/profile/<%= locals.user.id %>"><%= user.name %></a>
             </div>
             <div class="inline-div">
                 <a href="/users/sign-out">Sign Out</a>

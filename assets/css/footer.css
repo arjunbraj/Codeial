@@ -2,7 +2,7 @@ footer{
     display: flex;
     color: white;
     background-color: gray;
-    margin-top: 50vh;
+    margin-top: 50%;
     height: 4rem;
 }
 

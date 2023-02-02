@@ -19,7 +19,8 @@ header div{
 }
 
 .inline-div{
-    width: 6rem;
+    width: auto;
+    margin-right: 2rem;
 }
 
 .inline-div a{

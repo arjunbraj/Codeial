@@ -1,6 +1,6 @@
 
 <li id="post-<%= post._id %>">
-<% for(post of posts) { %>
+
     <p>
         <li>
             <% if(locals.user && locals.user.id == post.user.id){ %>
@@ -31,5 +31,5 @@
             </ul>
         </div>          
     </div>
-<% } %>
+
 </li>

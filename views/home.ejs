@@ -14,7 +14,9 @@
         <div id="posts-list-container">
             <h2>Wall of Posts</h2>
             <ul>
-                <%- include('_post') -%>
+                <% for(post of posts) { %>
+                    <%- include('_post') -%>
+                <% } %>
             </ul>
         </div>
     </section>

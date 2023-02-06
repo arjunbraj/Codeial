@@ -24,7 +24,6 @@
     let newPostDom = function(post){
         return $(`
         <li id="post-${ post._id }">
-        <% for(post of posts) { %>
             <p>
                 <li>
                     
@@ -53,7 +52,6 @@
                     </ul>
                 </div>          
             </div>
-        <% } %>
         </li>
         `);
     }

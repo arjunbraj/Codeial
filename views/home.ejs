@@ -13,7 +13,9 @@
         <% } %>
         <div id="posts-list-container">
             <h2>Wall of Posts</h2>
-            <%- include('_post') -%>
+            <ul>
+                <%- include('_post') -%>
+            </ul>
         </div>
     </section>
     <section id="user-friends">
@@ -25,3 +27,5 @@
         <% } %>
     </section>
 </div>
+
+<script src="/js/home_posts.js"></script>

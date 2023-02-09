@@ -12,6 +12,8 @@
                 success: function(data){
                     let newPost = newPostDom(data.data.post);
                     $('#posts-list-container>ul').prepend(newPost);
+                    deletePost($('.delete-post-btn'), newPost);
+                    req.flash('success', 'Created a post');
                 },
                 error: function(err){
                     console.log(err.responseText);
@@ -54,6 +56,25 @@
             </div>
         </li>
         `);
+    }
+
+    // delete a post
+    let deletePost = function(deleteLink){
+        $(deleteLink).click(function(e){
+            e.preventDefault();
+
+            $.ajax({
+                type: 'get',
+                url: $(deleteLink).prop('href'),
+                success: function(data){
+                    $(`#post-${data.post_id}`).remove();
+                    req.flash('success', 'Deleted a post');
+                },
+                error: function(err){
+                    console.log(err.responseText);
+                }
+            });
+        });
     }
 
     createPost();

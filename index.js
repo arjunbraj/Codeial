@@ -49,6 +49,7 @@ app.set('views', './views');
 // Seting up static files
 
 app.use(express.static('./assets'));
+app.use('/uploads', express.static(__dirname + '/uploads'));
 
 // set up session cookie
 app.use(session({
